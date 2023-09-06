@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>IMDB Clone-PB</title>
+    
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Outer-container for all the elements-->
+    <div class="outer-container">
+
+        <!-- logo container -->
+        <div class="logo">
+            <div class="container nav-bar">
+                <a href="home.html" id="logo"><img src="logo.png" alt=""></a>
+                <a href="fav/favPage.html" id="fav">Favourites</a>
+            </div>
+        </div>
+        <!-- end of logo -->
+
+        <!-- Search container -->
+        <div class="search-container">
+            <div class="search-element">
+                
+                <h1>Search Movie -></h1>
+                <input type="text" class="form-control" placeholder="Enter Movie Title..." id="movie-search-box">
+
+                <div class="search-list" id="search-list">
+                    <!-- This is the suggestions box list, inside which all similar movies will be displayed acc. to user entered movie title -->
+                </div>
+
+            </div>
+        </div>
+        <!-- end of Search container -->
+
+    </div>
+    <!-- end of outer container -->
+
+    <!-- Javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>
