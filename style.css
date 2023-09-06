@@ -1,0 +1,367 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Color scheme */
+:root {
+  --md-dark-color: #282727;
+  --dark-color: #363535;
+  --light-dark-color: #666565;
+  --yellow-color: #e8d934;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 308px;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Outer-container */
+
+.outer-container {
+  min-height: 100vh;
+  background-color: var(--dark-color);
+}
+
+.outer-container .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* End of outer-container */
+
+/* logo */
+
+.logo {
+  padding: 4px;
+  border-left: 4px solid var(--light-dark-color);
+  border-bottom: 2px solid var(--light-dark-color);
+}
+
+.logo a {
+  font-size: 2rem;
+  color: rgb(246, 242, 242);
+  font-weight: bold;
+  padding: 2px;
+}
+
+.logo a img{
+  width: 80px;
+  height: 40px;
+  padding: 2px;
+}
+
+#fav,
+#lastSearch {
+  font-size: 0.9rem;
+  margin-right: 10px;
+  padding: 4px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  flex: 1;
+}
+/*End of logo*/
+
+/* Search container */
+
+.search-container {
+  background-color: var(--md-dark-color);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 4px solid var(--light-dark-color);
+  border-bottom: 2px solid var(--light-dark-color);
+}
+
+.search-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.search-element h1 {
+  align-self: center;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.search-element .form-control {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 350px;
+  color: var(--light-dark-color);
+}
+
+.search-list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+.search-list .search-list-item {
+  background-color: var(--light-dark-color);
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dark-color);
+  width: calc(350px - 8px);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.search-list .search-list-item:hover {
+  background-color: #1f1f1f;
+}
+
+.search-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.search-item-thumbnail img {
+  width: 40px;
+  margin-right: 1rem;
+}
+
+.search-item-info h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.search-item-info p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+/* thumbnail */
+.search-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-list::-webkit-scrollbar-thumb {
+  background-color: var(--yellow-color);
+  outline: none;
+  border-radius: 10px;
+}
+
+/* js related class */
+.hide-search-list {
+  display: none;
+}
+
+/* End of Search container */
+
+/* --------------------------------------------------------------- */
+
+/* Movie Page css*/
+
+.result-container {
+  padding: 3rem 0;
+}
+
+/* poster image container */
+.movie-poster img {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 4px solid #fff;
+}
+
+/* Movie infromation Container */
+.movie-info {
+  text-align: center;
+  color: #fff;
+  padding-top: 3rem;
+}
+
+.movie-title {
+  font-size: 2rem;
+  color: var(--yellow-color);
+}
+
+.movie-misc-info {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.movie-info .year {
+  font-weight: 600;
+}
+
+.movie-info .rated {
+  background-color: var(--yellow-color);
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.movie-info .released {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.movie-info .writer {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.movie-info .genre {
+  background-color: var(--light-dark-color);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.movie-info .plot {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.movie-info .language {
+  color: var(--yellow-color);
+}
+
+.movie-info .awards {
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin: 0.9rem 0;
+}
+
+.movie-info .awards i {
+  color: var(--yellow-color);
+  margin: 0 0.2rem;
+}
+
+/* Add to Favourites button */
+#addToFav {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #292929;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--yellow-color);
+  cursor: pointer;
+}
+#addToFav:hover {
+  background-color: grey;
+}
+/* End of Movie Page  */
+
+/* media queries */
+
+@media screen and (max-width: 450px) {
+  .logo a {
+    font-size: 1.4rem;
+  }
+  .search-element .form-control {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .search-elementh h3 {
+    font-size: 1.4rem;
+  }
+  .search-list {
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .search-list .search-list-item {
+    width: 100%;
+  }
+
+  .movie-misc-info {
+    flex-direction: column;
+  }
+
+  .movie-misc-info:nth-child(2) {
+    margin: 0.8rem 0;
+  }
+
+  #addToFav {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .search-element {
+    flex-direction: row;
+  }
+
+  .search-element h1 {
+    margin-bottom: 0;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-info {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .movie-info .movie-misc-info {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .movie-info .plot {
+    margin-left: 0;
+  }
+
+  .movie-info .writer {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* end of media queries */
